@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .lol{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(202, 226, 135);
+        }
+        .calculate{
+            width: 250px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(14, 56, 14);
+            padding: 20px;
+        }
+        .calculate input{
+            background: none;
+            height: 70px;
+            border: 0;
+            font-size: 30px;
+            font-family: cursive;
+            color: rgb(24, 8, 2);
+            display: flex;
+            justify-content: center;
+            text-align: end;
+            background-color: white;
+            border-radius: 4px;
+            outline: none;
+            
+        }
+        #input2{
+            margin-top: 10px;
+        }
+        .butt{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .butt button{
+            width: 60px;
+            height: 30px;
+            background-color: yellow;
+            border: 0;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+        }
+        .calculate .input2{
+            margin-top: 900px;
+        }
+        #rat{
+            height: 70px;
+            border-radius: 4px;
+            font-size: 30px;
+            font-family: cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+            margin-top: 10px;
+            text-align: end;
+            overflow-x: scroll;
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+<div class="lol">
+    
+    <main class="calculate">
+        <input id="input1" type="text">
+        <input id="input2" type="text">
+        <p id="rat"></p>
+      
+        <div class="butt">
+            <button onclick="giveName()">+</button>
+            <button onclick="wizD()">-</button>
+            <button onclick="khaL()">/</button>
+            <button onclick="malK()">*</button>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
+
+<script>
+
+    let para = document.getElementById("rat")
+
+    function giveName(){
+        let kal = (document.getElementById("input1").value);
+         let kia = (document.getElementById("input2").value);
+
+        console.log((Number(kal)) + (Number(kia)))
+
+        para.innerHTML = ((Number(kal)) + (Number(kia)))
+    }
+
+    function wizD(){
+        let call = (document.getElementById("input1").value);
+         let cell = (document.getElementById("input2").value);
+
+        console.log((Number(call)) - (Number(cell)))
+
+        para.innerHTML = ((Number(call)) - (Number(cell)))
+    }
+
+    function khaL(){
+        let bal = (document.getElementById("input1").value);
+         let bia = (document.getElementById("input2").value);
+
+        console.log((Number(bal)) / (Number(bia)))
+        para.innerHTML = ((Number(bal)) / (Number(bia)))
+    }
+
+    function malK(){
+        let baal = (document.getElementById("input1").value);
+         let biia = (document.getElementById("input2").value);
+
+        console.log((Number(baal)) * (Number(biia)))
+
+        para.innerHTML = ((Number(baal)) * (Number(biia)))
+    }
+
+
+    //DATA TYPE
+
+</script>
